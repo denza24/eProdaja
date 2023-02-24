@@ -17,6 +17,7 @@ builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 builder.Services.AddScoped<IProizvodiService, ProizvodiService>();
 builder.Services.AddScoped<IKorisniciService, KorisniciService>();
+builder.Services.AddScoped<IJediniceMjereService, JediniceMjereService>();
 
 builder.Services.AddDbContext<EProdajaContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));

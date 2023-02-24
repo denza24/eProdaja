@@ -3,8 +3,7 @@ using eProdaja.Models.SearchObjects;
 
 namespace eProdaja.Services.Interfaces
 {
-    public interface IProizvodiService : IService<ProizvodiDto, ProizvodiSearchObject>
+    public interface IJediniceMjereService : IService<JediniceMjereDto, BaseSearchObject>
     {
-
     }
 }
