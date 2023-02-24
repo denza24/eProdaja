@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Models\eProdaja.Models.csproj" />
+	  <ProjectReference Include="..\eProdaja.Models\eProdaja.Models.csproj" />
   </ItemGroup>
 
 </Project>
