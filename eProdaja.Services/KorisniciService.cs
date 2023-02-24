@@ -5,9 +5,9 @@ using eProdaja.Services.Interfaces;
 
 namespace eProdaja.Services
 {
-    public class ProizvodiService : BaseService<Proizvodi, ProizvodiDto>, IProizvodiService
+    public class KorisniciService : BaseService<Korisnici, KorisniciDto>, IKorisniciService
     {
-        public ProizvodiService(EProdajaContext db, IMapper mapper) : base(db, mapper)
+        public KorisniciService(EProdajaContext db, IMapper mapper) : base(db, mapper)
         {
         }
     }

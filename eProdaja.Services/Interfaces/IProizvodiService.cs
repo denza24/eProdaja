@@ -1,11 +1,9 @@
-﻿using eProdaja.Services.Database;
-using eProdaja.Models;
+﻿using eProdaja.Models;
 
 namespace eProdaja.Services.Interfaces
 {
-    public interface IProizvodiService
+    public interface IProizvodiService : IService<ProizvodiDto>
     {
-        IEnumerable<ProizvodiDto> Get();
-        ProizvodiDto GetById(int id);
+
     }
 }

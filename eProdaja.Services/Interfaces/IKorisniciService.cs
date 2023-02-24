@@ -2,9 +2,7 @@
 
 namespace eProdaja.Services.Interfaces
 {
-    public interface IKorisniciService
+    public interface IKorisniciService : IService<KorisniciDto>
     {
-        IEnumerable<KorisniciDto> Get();
-        ProizvodiDto GetById(int id);
     }
 }

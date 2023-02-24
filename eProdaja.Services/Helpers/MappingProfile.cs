@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using eProdaja.Services.Database;
 using eProdaja.Models;
+using eProdaja.Services.Database;
 
 namespace eProdaja.Services.Helpers
 {
@@ -9,6 +9,7 @@ namespace eProdaja.Services.Helpers
         public MappingProfile()
         {
             CreateMap<Proizvodi, ProizvodiDto>();
+            CreateMap<Korisnici, KorisniciDto>();
         }
     }
 }

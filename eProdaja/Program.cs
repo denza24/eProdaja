@@ -16,8 +16,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 builder.Services.AddScoped<IProizvodiService, ProizvodiService>();
+builder.Services.AddScoped<IKorisniciService, KorisniciService>();
 
-builder.Services.AddDbContext<EProdajaContext>(options => 
+builder.Services.AddDbContext<EProdajaContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
