@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace eProdaja.Services.Database;
 
@@ -150,8 +148,8 @@ public partial class EProdajaContext : DbContext
             entity.Property(e => e.Email).HasMaxLength(100);
             entity.Property(e => e.Ime).HasMaxLength(50);
             entity.Property(e => e.KorisnickoIme).HasMaxLength(50);
-            entity.Property(e => e.LozinkaHash).HasMaxLength(50);
-            entity.Property(e => e.LozinkaSalt).HasMaxLength(50);
+            entity.Property(e => e.LozinkaHash).HasMaxLength(200);
+            entity.Property(e => e.LozinkaSalt).HasMaxLength(200);
             entity.Property(e => e.Prezime).HasMaxLength(50);
             entity.Property(e => e.Status)
                 .IsRequired()

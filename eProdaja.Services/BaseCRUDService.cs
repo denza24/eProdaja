@@ -15,11 +15,12 @@ namespace eProdaja.Services
         {
         }
 
-        public TDto Insert(TInsert insert)
+        public virtual TDto Insert(TInsert insert)
         {
             var entity = _mapper.Map<T>(insert);
             _context.Set<T>().Add(entity);
 
+            BeforeInsert(insert, entity);
             _context.SaveChanges();
 
             return _mapper.Map<TDto>(entity);
@@ -33,6 +34,11 @@ namespace eProdaja.Services
             _context.SaveChanges();
 
             return _mapper.Map<TDto>(entity);
+        }
+
+        public virtual void BeforeInsert(TInsert insert, T entity)
+        {
+            return;
         }
 
     }
