@@ -1,8 +1,10 @@
-﻿namespace eProdaja.Services.Interfaces
+﻿using eProdaja.Models.SearchObjects;
+
+namespace eProdaja.Services.Interfaces
 {
-    public interface IService<T, TSearch> where TSearch : class
+    public interface IService<TDto, TSearch> where TDto : class where TSearch : BaseSearchObject
     {
-        IEnumerable<T> Get(TSearch? name = null);
-        T GetById(int id);
+        IEnumerable<TDto> Get(TSearch? name = null);
+        TDto GetById(int id);
     }
 }

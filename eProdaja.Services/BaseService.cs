@@ -7,8 +7,8 @@ namespace eProdaja.Services
 {
     public class BaseService<T, TDto, TSearch> : IService<TDto, TSearch> where TDto : class where T : class where TSearch : BaseSearchObject
     {
-        private readonly EProdajaContext _context;
-        private readonly IMapper _mapper;
+        public readonly EProdajaContext _context;
+        public readonly IMapper _mapper;
 
         public BaseService(EProdajaContext context, IMapper mapper)
         {

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace eProdaja.Services.Database;
+﻿namespace eProdaja.Services.Database;
 
 public partial class Korisnici
 {

@@ -1,12 +1,13 @@
 ﻿using AutoMapper;
 using eProdaja.Models;
+using eProdaja.Models.InsertObjects;
 using eProdaja.Models.SearchObjects;
 using eProdaja.Services.Database;
 using eProdaja.Services.Interfaces;
 
 namespace eProdaja.Services
 {
-    public class KorisniciService : BaseService<Korisnici, KorisniciDto, KorisniciSearchObject>, IKorisniciService
+    public class KorisniciService : BaseCRUDService<Korisnici, KorisniciDto, KorisniciSearchObject, KorisniciInsertObject, KorisniciUpdateObject>, IKorisniciService
     {
         public KorisniciService(EProdajaContext db, IMapper mapper) : base(db, mapper)
         {
