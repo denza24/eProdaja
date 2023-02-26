@@ -27,5 +27,13 @@ namespace eProdaja.Controllers
 
             return result;
         }
+
+        [HttpDelete("{id}")]
+        public ActionResult<bool> Delete(int id)
+        {
+            var result = ((ICRUDService<TDto, TSearch, TInsert, TUpdate>)_service).Delete(id);
+
+            return result;
+        }
     }
 }

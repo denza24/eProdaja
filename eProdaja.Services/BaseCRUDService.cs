@@ -36,6 +36,17 @@ namespace eProdaja.Services
             return _mapper.Map<TDto>(entity);
         }
 
+        public virtual bool Delete(int id)
+        {
+            var entity = _context.Set<T>().Find(id);
+            if (entity == null) return false;
+
+            _context.Remove(entity);
+            _context.SaveChanges();
+
+            return true;
+        }
+
         public virtual void BeforeInsert(TInsert insert, T entity)
         {
             return;

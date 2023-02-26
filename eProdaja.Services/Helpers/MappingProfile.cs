@@ -2,6 +2,7 @@
 using eProdaja.Models;
 using eProdaja.Models.InsertObjects;
 using eProdaja.Models.UpdateObjects;
+using eProdaja.Models.UpsertObjects;
 using eProdaja.Services.Database;
 
 namespace eProdaja.Services.Helpers
@@ -19,6 +20,7 @@ namespace eProdaja.Services.Helpers
             CreateMap<KorisniciUpdateObject, Korisnici>();
 
             CreateMap<Uloge, UlogeDto>().ForMember(u => u.Id, opt => opt.MapFrom(u => u.UlogaId));
+            CreateMap<UlogeUpsertObject, Uloge>();
 
         }
     }

@@ -7,5 +7,6 @@ namespace eProdaja.Services.Interfaces
     {
         TDto Insert(TInsert insert);
         TDto Update(int id, TUpdate update);
+        bool Delete(int id);
     }
 }
