@@ -4,6 +4,7 @@ using eProdaja.Models.InsertObjects;
 using eProdaja.Models.SearchObjects;
 using eProdaja.Services.Database;
 using eProdaja.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -63,6 +64,15 @@ namespace eProdaja.Services
             }
 
             return filteredQuery;
+        }
+
+        public override IQueryable<Korisnici> AddInclude(IQueryable<Korisnici> query, KorisniciSearchObject? search = null)
+        {
+            var updatedQuery = base.AddInclude(query, search);
+
+            updatedQuery = query.Include(k => k.KorisniciUloges).ThenInclude(ku => ku.Uloga);
+
+            return updatedQuery;
         }
 
     }

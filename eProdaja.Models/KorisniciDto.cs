@@ -1,4 +1,6 @@
-﻿namespace eProdaja.Models
+﻿using System.Collections.Generic;
+
+namespace eProdaja.Models
 {
     public class KorisniciDto
     {
@@ -9,5 +11,6 @@
         public string Telefon { get; set; }
         public string KorisnickoIme { get; set; }
         public bool? Status { get; set; }
+        public List<UlogeDto> Uloge { get; set; }
     }
 }

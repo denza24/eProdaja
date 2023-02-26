@@ -14,9 +14,12 @@ namespace eProdaja.Services.Helpers
             CreateMap<ProizvodiInsertObject, Proizvodi>();
             CreateMap<ProizvodiUpdateObject, Proizvodi>();
 
-            CreateMap<Korisnici, KorisniciDto>();
+            CreateMap<Korisnici, KorisniciDto>().ForMember(k => k.Uloge, opt => opt.MapFrom(k => k.KorisniciUloges.Select(ku => ku.Uloga)));
             CreateMap<KorisniciInsertObject, Korisnici>();
             CreateMap<KorisniciUpdateObject, Korisnici>();
+
+            CreateMap<Uloge, UlogeDto>().ForMember(u => u.Id, opt => opt.MapFrom(u => u.UlogaId));
+
         }
     }
 }

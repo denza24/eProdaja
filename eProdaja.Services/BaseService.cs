@@ -20,6 +20,7 @@ namespace eProdaja.Services
         {
             var entities = _context.Set<T>().AsQueryable();
 
+            entities = AddInclude(entities, search);
             entities = AddFilter(entities, search);
 
             if (search?.Page.HasValue == true && search?.PageSize.HasValue == true)
@@ -42,5 +43,9 @@ namespace eProdaja.Services
             return query;
         }
 
+        public virtual IQueryable<T> AddInclude(IQueryable<T> query, TSearch? search = null)
+        {
+            return query;
+        }
     }
 }
