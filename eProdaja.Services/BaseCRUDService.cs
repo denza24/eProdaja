@@ -26,7 +26,7 @@ namespace eProdaja.Services
             return _mapper.Map<TDto>(entity);
         }
 
-        public TDto Update(int id, TUpdate update)
+        public virtual TDto Update(int id, TUpdate update)
         {
             var entity = _context.Set<T>().Find(id);
 

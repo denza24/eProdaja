@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace eProdaja.Services.Database;
+﻿namespace eProdaja.Services.Database;
 
 public partial class Proizvodi
 {
@@ -22,6 +19,10 @@ public partial class Proizvodi
     public byte[]? SlikaThumb { get; set; }
 
     public bool? Status { get; set; }
+
+    public string StateMachine { get; set; } = null!;
+
+    public bool Obrisan { get; set; }
 
     public virtual ICollection<IzlazStavke> IzlazStavkes { get; } = new List<IzlazStavke>();
 

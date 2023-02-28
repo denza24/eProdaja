@@ -7,6 +7,8 @@ namespace eProdaja.Services.Interfaces
 {
     public interface IProizvodiService : ICRUDService<ProizvodiDto, ProizvodiSearchObject, ProizvodiInsertObject, ProizvodiUpdateObject>
     {
-
+        ProizvodiDto Activate(int id);
+        ProizvodiDto Hide(int id);
+        List<string> AllowedActions(int id);
     }
 }
