@@ -43,7 +43,7 @@ namespace eProdaja.Services
             using var hmac = new HMACSHA512();
 
             entity.LozinkaSalt = Convert.ToBase64String(hmac.Key);
-            entity.LozinkaHash = Convert.ToBase64String(hmac.ComputeHash(Encoding.Default.GetBytes(insert.Password)));
+            entity.LozinkaHash = Convert.ToBase64String(hmac.ComputeHash(Encoding.UTF8.GetBytes(insert.Password)));
 
             base.BeforeInsert(insert, entity);
         }

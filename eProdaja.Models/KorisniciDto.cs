@@ -11,6 +11,7 @@ namespace eProdaja.Models
         public string Telefon { get; set; }
         public string KorisnickoIme { get; set; }
         public bool? Status { get; set; }
+        public string Token { get; set; }
         public List<UlogeDto> Uloge { get; set; }
     }
 }
