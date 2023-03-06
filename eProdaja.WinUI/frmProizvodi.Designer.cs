@@ -1,4 +1,4 @@
-﻿namespace WinUI
+﻿namespace eProdaja.WinUI
 {
     partial class frmProizvodi
     {

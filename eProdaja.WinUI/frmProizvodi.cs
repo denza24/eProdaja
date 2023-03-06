@@ -1,6 +1,6 @@
 ﻿using eProdaja.Models;
 
-namespace WinUI
+namespace eProdaja.WinUI
 {
     public partial class frmProizvodi : Form
     {

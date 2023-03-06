@@ -1,4 +1,4 @@
-namespace WinUI
+namespace eProdaja.WinUI
 {
     internal static class Program
     {
@@ -11,7 +11,17 @@ namespace WinUI
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmProizvodi());
+
+            var frmLogin = new frmLogin();
+
+            if (frmLogin.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new frmProizvodi());
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
     }
 }
