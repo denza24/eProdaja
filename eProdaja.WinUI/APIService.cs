@@ -1,11 +1,12 @@
 ﻿using eProdaja.Models;
+using eProdaja.WinUI.Properties;
 using Flurl.Http;
 
 namespace eProdaja.WinUI
 {
     public class APIService
     {
-        private string _apiUrl = "https://localhost:44360/api/";
+        private string _apiUrl = Settings.Default.ApiUrl;
         private string _resource { get; set; }
         private static string? _token { get; set; }
 
@@ -49,7 +50,7 @@ namespace eProdaja.WinUI
 
                 return user;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Wrong username or password");
                 return default;
